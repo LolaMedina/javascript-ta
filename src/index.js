@@ -1,6 +1,9 @@
 // complete the function
 function palindrom(str) {
   // code goes here
+  const sample = (str) => str.toLowerCase().replace(/[\W_]/g, '');
+  const sampleStr = sample(str);
+  return sampleStr.split('').every((s, i) => s === sampleStr[sampleStr.length - 1 - i]);
 }
 
 function solution(arg) {
